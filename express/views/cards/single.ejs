@@ -1,0 +1,19 @@
+<!--
+    Notice that this template is wrapped in a turbo-frame element with an id.
+    This turbo-frame ID is used to replace the view with the edit template when
+    clicking edit.
+-->
+<turbo-frame id="card_frame_<%- card.id %>">
+    <!--
+        We use this card_{id} id to remove the element in the delete request.
+        We use res.turboStream.remove('card_{id}'); to do that.
+    -->
+
+    <div id="card_<%- card.id %>" class="card-container">
+        <img class="pure-img" src="<%- card.image %>" />
+        <p><%- card.content %></p>
+
+        <div class="card-actions">
+        </div>
+    </div>
+</turbo-frame>

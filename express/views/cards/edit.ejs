@@ -1,0 +1,10 @@
+<!--
+    We are using the turbo-frame element here to replace the existing cards/show.ejs template when you edit a card.
+    When we send down a response with a turbo-frame with the same "id", @hotwire/turbo knows to replace that id in the DOM with the new response.
+-->
+<turbo-frame id="card_frame_<%- card.id %>" target="_top">
+    <form action="/cards/<%- card.id %>" method="POST">
+        <input name="content" type="text" value="<%- card.content %>" />
+        <button type="submit">Send</button>
+    </form>
+</turbo-frame>

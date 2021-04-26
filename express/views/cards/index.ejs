@@ -1,0 +1,10 @@
+<h1>Current Cards</h1>
+
+<div id="cards" class="pure-g">
+<% cards.forEach((card) => { %>
+    <div class="pure-u-1-12">
+        <%- include('./single', { card: card }); %>
+    </div>
+<% }) %>
+</div>
+
